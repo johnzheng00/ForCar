@@ -219,7 +219,7 @@ componentWillMount: function() {
     {
       method: "POST",
       headers:{ "Content-Type": "application/json"},
-      body: JSON.stringify(comfirmOrder)
+      body: JSON.stringify(comfirmData)
 
     }
     )
@@ -230,10 +230,14 @@ componentWillMount: function() {
         // for (var i in responseText.list) {
         //   days.push(responseText.list[i]);
         // }
+        Alert.alert(
+                '提示',
+                responseText.msg,
+                [
+                  {text: 'OK', onPress: () => console.log('OK Pressed!')},
+                ]
+              );
 
-        this.setState({
-         dataSource: this.getDataSource(responseText.list),
-      });
       })
       .catch((error) => {
         console.warn(error);
@@ -313,10 +317,7 @@ componentWillMount: function() {
 
   _pressRow: function(startTime: string, endTime: String) {
     this.comfirmOrder(startTime, endTime);
-
   },
-
-
 });
 
 
