@@ -103,7 +103,7 @@ _handlePress(event) {
 
     <Text
 
-    style={{flex:0,height:40,position:'absolute',left:12,right:12,top:12,color:'white',fontWeight:'bold',backgroundColor:'#4cc0e0',textAlign:'center',paddingTop:10,borderRadius:5}}>
+    style={styles.login>
       登录
     </Text>
 
@@ -205,6 +205,12 @@ const styles = StyleSheet.create({
   maxSpaceLeft:{
     marginLeft:50,
   },
+  login:{
+    flex:0,height:40,position:'absolute',
+    left:12,right:12,top:12,color:'white',
+    fontWeight:'bold',backgroundColor:'#4cc0e0',
+    textAlign:'center',paddingTop:10,
+  }
 });
 
 //AppRegistry.registerComponent('ForCar', () => ForCar);

@@ -312,14 +312,8 @@ componentWillMount: function() {
    },
 
   _pressRow: function(startTime: string, endTime: String) {
-    //this.comfirmOrder()
-    Alert.alert(
-            '提示',
-            startTime,
-            [
-              {text: 'OK', onPress: () => console.log('OK Pressed!')},
-            ]
-          );
+    this.comfirmOrder(startTime, endTime);
+
   },
 
 
