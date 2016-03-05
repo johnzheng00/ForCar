@@ -31,9 +31,11 @@ var {
   View,
 } = React;
 
+
 //var navigator = new Navigator();
 //var ImageView = require('./ImageView');
 var TimerMixin = require('react-timer-mixin');
+var RefreshableListView = require('react-native-refreshable-listview')
 
 var API_URL = 'http://118.180.5.28:8080/ylc/student/get_days_v2?';
 
@@ -113,12 +115,12 @@ componentWillMount: function() {
     return (
       // ListView wraps ScrollView and so takes on its properties.
       // With that in mind you can use the ScrollView's contentContainerStyle prop to style the items.
-      <ListView
+      <RefreshableListView
         contentContainerStyle={styles.list}
         dataSource={this.state.dataSource}
         renderRow={this._renderRow}
-        renderFooter={this.renderFooter}
-        onEndReached={this.onEndReached}
+        loadData={this.loadData}
+
       />
     );
   },

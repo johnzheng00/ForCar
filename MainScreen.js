@@ -135,7 +135,7 @@ _handlePress(event) {
         .then((responseText) => {
           console.log(responseText);
           if (responseText.ret==='0') {
-              this.props.navigator.push({
+              this.props.navigator.replace({
                 name:'DayListView',
                 user: responseText,
               });

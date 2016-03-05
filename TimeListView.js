@@ -130,6 +130,8 @@ var comfirmData=
 }
 
 var React = require('react-native');
+var RefreshableListView = require('react-native-refreshable-listview')
+
 var {
   Image,
   ListView,
@@ -255,7 +257,8 @@ componentWillMount: function() {
 
       // ListView wraps ScrollView and so takes on its properties.
       // With that in mind you can use the ScrollView's contentContainerStyle prop to style the items.
-      <ListView
+      <RefreshableListView
+        loadData={this.loadData}
         contentContainerStyle={styles.list}
         dataSource={this.state.dataSource}
         renderRow={this._renderRow}

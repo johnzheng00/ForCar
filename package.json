@@ -7,6 +7,8 @@
   },
   "dependencies": {
     "react-native": "^0.20.0",
-    "react-native-button": "^1.4.2"
+    "react-native-button": "^1.4.2",
+    "react-native-refresh-control": "github:dickyt/RCTRefreshControl",
+    "react-native-refreshable-listview": "^1.3.0"
   }
 }
